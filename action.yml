@@ -4,16 +4,9 @@ author: 'Scott Brenner'
 outputs:
   changelog:
     description: 'Generate changelog'
-inputs:
-  package-dir:
-    description: 'The path for the package.json if it is not in root'
-    required: false
-    default: 'package.json'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.package-dir }}
 branding:
   icon: 'edit'
   color: 'gray-dark'
