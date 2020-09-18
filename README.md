@@ -1,10 +1,9 @@
 # generate-changelog-action
 
-GitHub Action for [lob/generate-changelog](https://github.com/lob/generate-changelog/). Intended to be used with [actions/create-release](https://github.com/actions/create-release).
+GitHub Action for generating a changelog of all the git commits between the new tag and the latest tags. 
 
-**Note:** [Your repository must contain a `package.json` file.](https://github.com/lob/generate-changelog/issues/38#issuecomment-362726723)
-
-Created during the GitHub Actions Hackathon 2020 and [selected as one of the winning projects!](https://docs.google.com/spreadsheets/d/1YL6mjJXGt3-75GejQCubsOvWwtYcGaqbJA7msnsh7Tg/edit#gid=0&range=A100:C100)
+Based on [ScottBrenner/generate-changelog-action](https://github.com/ScottBrenner/generate-changelog-action). 
+Intended to be used with [actions/create-release](https://github.com/actions/create-release).
 
 ## Example workflow - create a release
 Extends [actions/create-release: Example workflow - create a release](https://github.com/actions/create-release#example-workflow---create-a-release) to generate changelog from git commits and use it as the body for the GitHub release.
@@ -49,17 +48,5 @@ jobs:
 The above workflow will create a release that looks like:
 ![Release](release.png)
 
-If your `package.json` isn't available in root, you can pass the directory of the `package.json`:
-
-```yaml
-      - name: Changelog
-        uses: scottbrenner/generate-changelog-action@master
-        id: Changelog
-        env:
-          REPO: ${{ github.repository }}
-        with:
-          package-dir: 'root/to/my/package.json'
-```
-
-For more information, see [actions/create-release: Usage](https://github.com/actions/create-release#usage) and [lob/generate-changelog: Usage](https://github.com/lob/generate-changelog#usage)
+For more information, see [actions/create-release: Usage](https://github.com/actions/create-release#usage).
 
