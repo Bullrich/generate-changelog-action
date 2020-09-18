@@ -1,6 +1,6 @@
 name: 'generate-changelog-action'
-description: 'GitHub Action for lob/generate-changelog'
-author: 'Scott Brenner'
+description: 'GitHub Action for generating a changelog of all commits in a release'
+author: 'Javier Bullrich'
 outputs:
   changelog:
     description: 'Generate changelog'

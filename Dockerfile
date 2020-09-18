@@ -1,7 +1,6 @@
 FROM alpine:3
 
-RUN apk --no-cache add git nodejs-npm
-RUN npm install -g generate-changelog
+RUN apk --no-cache add git
 
 COPY LICENSE README.md /
 
