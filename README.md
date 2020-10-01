@@ -1,4 +1,4 @@
-# generate-changelog-action
+# generate-release-changelog
 
 GitHub Action for generating a changelog of all the git commits between the new tag and the latest tags. 
 
